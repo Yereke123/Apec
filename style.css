@@ -1,0 +1,183 @@
+/* Основной цвет (можно поменять здесь, и он изменится везде) */
+:root {
+  --main-blue: #0056b3;
+  --hover-text-color: #000000; /* Черный текст при наведении */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e9ecef; /* Чуть темнее фон страницы для контраста */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- Основная Карточка --- */
+.profile-card {
+  background: white;
+  width: 100%;
+  max-width: 480px; /* 1. Сделали рамку больше (было 400) */
+  border-radius: 25px; /* Более сильные закругления */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Более выраженная тень */
+  text-align: center;
+  overflow: hidden; /* Важно! Чтобы синий низ обрезался по закруглению */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Контейнер для белой части контента */
+.card-content {
+  padding: 5px 30px 30px; /* Увеличенные внутренние отступы */
+  flex-grow: 1;
+}
+
+/* --- Логотип --- */
+.logo-container {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container img {
+  max-height: 200px; /* Ограничение высоты логотипа */
+  width: 300px;
+  object-fit: contain;
+}
+
+/* --- Фото --- */
+.photo-container {
+  width: 140px; /* Чуть больше фото */
+  height: 140px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff; /* Рамка вокруг фото */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Текст --- */
+.info h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.job-title {
+  color: var(--main-blue); /* Должность тоже синим */
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* --- Кнопки (Все синие) --- */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  gap: 10px;
+  transition: all 0.3s ease;
+  
+  /* 2. Все кнопки синие по умолчанию */
+  background-color: var(--main-blue);
+  color: white;
+  border: 2px solid var(--main-blue); /* Добавляем рамку того же цвета */
+}
+
+/* Иконки внутри кнопок */
+.btn i {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* 3. Хувер эффект для кнопок */
+.btn:hover {
+  background-color: white;
+  color: var(--hover-text-color); /* Текст черный */
+  border-color: var(--main-blue); /* Рамка остается синей */
+  transform: translateY(-2px); /* Небольшой подъем */
+  box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2); /* Легкая синяя тень */
+}
+
+/* Иконка при наведении тоже становится черной */
+.btn:hover i {
+    color: var(--hover-text-color);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+
+/* --- 4. Синий низ (Подвал) --- */
+.card-footer-blue {
+  background-color: var(--main-blue);
+  padding: 25px 0;
+  margin-top: auto; /* Прижимаем к низу, если карточка растягивается */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный текст */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.icon-box {
+  /* Фон для иконок теперь прозрачный или чуть светлее синего */
+  background: rgba(255, 255, 255, 0.15);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: white; /* Иконки белые */
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Хувер на нижние иконки */
+.footer-links a:hover {
+  color: white;
+}
+.footer-links a:hover .icon-box {
+  background: white;
+  color: var(--main-blue); /* При наведении иконка синяя, фон белый */
+}

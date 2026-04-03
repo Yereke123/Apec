@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Электронная визитка</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="profile-card">
+    
+    <div class="card-content">
+      <div class="logo-container">
+        <img src="logo-apec.png" alt="Логотип" id="companyLogo">
+      </div>
+
+      <div class="photo-container">
+        <img src="" id="userPhoto" alt="Фото профиля" onerror="this.src='https://via.placeholder.com/150?text=No+Photo'">
+      </div>
+
+      <div class="info">
+        <h2 id="fullName">Загрузка...</h2>
+        <p id="jobTitle" class="job-title"></p>
+      </div>
+
+      <div class="actions">
+        <a id="btnWhatsapp" href="#" class="btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+        </a>
+
+        <a id="btnEmail" href="#" class="btn">
+          <i class="far fa-envelope"></i> Отправить Email
+        </a>
+
+        <a id="btnSaveContact" href="#" class="btn" target="_blank">
+          <i class="fas fa-user-plus"></i> Добавить в контакты
+        </a>
+      </div>
+    </div>
+
+    <div class="card-footer-blue">
+      <div class="footer-links">
+        <a href="https://go.2gis.com/T2rHg" target="_blank" title="Адрес колледжа">
+          <div class="icon-box">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <span>Адрес</span>
+        </a>
+
+        <a href="https://apec.edu.kz" target="_blank" title="Сайт APEC">
+          <div class="icon-box">
+            <i class="fas fa-university"></i>
+          </div>
+          <span>apec.edu.kz</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
