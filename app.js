@@ -1,5 +1,5 @@
 // Настройка: Ссылка на ваш сайт-генератор контактов
-const CONTACTS_SITE_URL = "https://qannabic.github.io/contacts.github.io/"; 
+const CONTACTS_SITE_URL = "https://yereke123.github.io/Apec-Contacts/"; 
 
 // Функция для получения параметра из URL (?id=eldar)
 function getQueryParam(param) {
